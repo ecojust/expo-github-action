@@ -1,0 +1,53 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "build:local": "node scripts/update-build-info.js && eas build --platform android --profile preview --local",
+    "build:apk": "node scripts/update-build-info.js && eas build --platform android --profile preview",
+    "update-build-info": "node scripts/update-build-info.js"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/stack": "^7.4.5",
+    "axios": "^1.11.0",
+    "expo": "~53.0.20",
+    "expo-asset": "^11.1.7",
+    "expo-av": "^15.1.7",
+    "expo-camera": "^16.1.11",
+    "expo-constants": "^17.1.7",
+    "expo-device": "^7.1.4",
+    "expo-file-system": "^18.1.11",
+    "expo-font": "^13.3.2",
+    "expo-image-picker": "^16.1.4",
+    "expo-linear-gradient": "^14.1.5",
+    "expo-native-test": "file:./modules/expo-native-test",
+    "expo-notifications": "^0.31.4",
+    "expo-react-native-toastify": "^1.0.19",
+    "expo-router": "^5.1.4",
+    "expo-splash-screen": "~0.30.10",
+    "expo-status-bar": "~2.2.3",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-ble-manager": "^12.1.5",
+    "react-native-bluetooth-classic": "^1.73.0-rc.14",
+    "react-native-element-dropdown": "^2.12.4",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-qrcode-svg": "^6.3.15",
+    "react-native-safe-area-context": "^5.6.0",
+    "react-native-screens": "^4.13.1",
+    "react-native-svg": "^15.12.1",
+    "react-native-view-shot": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 允许所有HTTP流量 - 仅用于生产环境特殊需求 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- 替换为你的实际API域名 -->
+        <!-- <domain includeSubdomains="true">http://139.224.0.239:50000</domain> -->
+        <!-- 如果需要支持IP地址访问，可以添加 -->
+        <domain includeSubdomains="true">218.90.252.27</domain>
+    </domain-config>
+    
+    <!-- 或者如果需要全局允许HTTP（不推荐，安全风险较高） -->
+    
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+   
+</network-security-config>
