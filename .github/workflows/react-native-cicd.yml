@@ -128,6 +128,15 @@ jobs:
             echo "metro.config.js not found"
           fi
 
+      - name: ⚙️ Install expo-dev-client (for dev builds)
+        if: github.event.inputs.buildType == 'all' || github.event.inputs.buildType == 'dev' || github.event_name == 'push'
+        run: |
+          echo "Installing expo-dev-client dependency needed for development client builds"
+          # Add as a dev dependency so local EAS development client builds succeed
+          npx expo install expo-dev-client
+        env:
+          NODE_ENV: development
+
       - name: 📱 Build Development APK
         if: github.event.inputs.buildType == 'all' || github.event.inputs.buildType == 'dev' || github.event_name == 'push'
         run: |
